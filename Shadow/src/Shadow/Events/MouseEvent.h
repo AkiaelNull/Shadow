@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Shadow {
 
 	class SW_API MouseMovedEvent : public Event

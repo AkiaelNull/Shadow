@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Shadow">
+      <UniqueIdentifier>{4B0E0CD1-37B0-36A7-206B-4AFB0CACBDF7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Shadow\Application.cpp">
+      <Filter>Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shadow\Log.cpp">
+      <Filter>Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hzpch.cpp" />
+  </ItemGroup>
+</Project>
