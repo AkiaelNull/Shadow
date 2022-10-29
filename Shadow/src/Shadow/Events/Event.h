@@ -1,7 +1,7 @@
 #pragma once
 
+#include "swpch.h"
 #include "Shadow/Core.h"
-#include "hzpch.h"
 
 namespace Shadow {
 

@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Shadow/Log.h"
+
 #ifdef SW_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

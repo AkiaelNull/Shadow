@@ -10,6 +10,11 @@ workspace "Shadow"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Shadow/vendor/GLFW/include"
+
+include "Shadow/vendor/GLFW"
+
 project "Shadow"
     location "Shadow"
     kind "SharedLib"
@@ -18,8 +23,8 @@ project "Shadow"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-    pchheader "hzpch.h"
-    pchsource "Shadow/src/hzpch.cpp"
+    pchheader "swpch.h"
+    pchsource "Shadow/src/swpch.cpp"
 
     files
     {
@@ -30,7 +35,14 @@ project "Shadow"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
