@@ -18,6 +18,12 @@
     <ClCompile Include="src\Shadow\Application.cpp">
       <Filter>Shadow</Filter>
     </ClCompile>
+    <ClCompile Include="src\Shadow\Layer.cpp">
+      <Filter>Shadow</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Shadow\LayerStack.cpp">
+      <Filter>Shadow</Filter>
+    </ClCompile>
     <ClCompile Include="src\Shadow\Log.cpp">
       <Filter>Shadow</Filter>
     </ClCompile>

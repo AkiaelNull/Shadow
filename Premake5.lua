@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Shadow/vendor/GLFW/include"
+IncludeDir["Glad"] = "Shadow/vendor/Glad/include"
 
 include "Shadow/vendor/GLFW"
+include "Shadow/vendor/Glad"
 
 project "Shadow"
     location "Shadow"
@@ -36,12 +38,14 @@ project "Shadow"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -53,7 +57,8 @@ project "Shadow"
         defines
         {
             "SW_PLATFORM_WINDOWS",
-            "SW_BUILD_DLL"
+            "SW_BUILD_DLL",
+            "GLFW_INCLUDE_NONE"
         }
 
         postbuildcommands
@@ -63,14 +68,17 @@ project "Shadow"
 
     filter "configurations:Debug"
         defines "SW_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "SW_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "SW_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 project "Sandbox"
@@ -110,12 +118,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "SW_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "SW_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "SW_DIST"
+        buildoptions "/MD"
         optimize "On"
