@@ -13,9 +13,60 @@
     <Filter Include="Shadow">
       <UniqueIdentifier>{4B0E0CD1-37B0-36A7-206B-4AFB0CACBDF7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shadow\Events">
+      <UniqueIdentifier>{CF57EF47-3B18-6B7E-0453-B4FB70D2AF5A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Shadow\ImGui">
       <UniqueIdentifier>{B5CFB619-A132-46BE-4AB8-7E7436FA1141}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow.h" />
+    <ClInclude Include="src\Shadow\Application.h">
+      <Filter>Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow\Core.h">
+      <Filter>Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow\EntryPoint.h">
+      <Filter>Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow\Events\ApplicationEvent.h">
+      <Filter>Shadow\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow\Events\Event.h">
+      <Filter>Shadow\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow\Events\KeyEvent.h">
+      <Filter>Shadow\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow\Events\MouseEvent.h">
+      <Filter>Shadow\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow\ImGui\ImGuiLayer.h">
+      <Filter>Shadow\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow\Layer.h">
+      <Filter>Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow\LayerStack.h">
+      <Filter>Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow\Log.h">
+      <Filter>Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Shadow\Window.h">
+      <Filter>Shadow</Filter>
+    </ClInclude>
+    <ClInclude Include="src\swpch.h" />
+    <ClInclude Include="src\Shadow\Input.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
@@ -40,5 +91,6 @@
       <Filter>Shadow</Filter>
     </ClCompile>
     <ClCompile Include="src\swpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>
