@@ -11,12 +11,18 @@ public:
 
 	void OnUpdate() override
 	{
-		SW_INFO("ExampleLayer::Update");
+		if(Shadow::Input::IsKeyPressed(SW_KEY_TAB))
+			SW_TRACE("Tab key pressed")
+
 	}
 
 	void OnEvent(Shadow::Event& event) override
 	{
-		SW_TRACE("{0}", event)
+		if (event.GetEventType() == Shadow::EventType::KeyPressed)
+		{
+			Shadow::KeyPressedEvent& e = (Shadow::KeyPressedEvent&)event;
+			SW_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 };
 
